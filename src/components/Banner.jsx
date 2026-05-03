@@ -1,6 +1,6 @@
 import React from "react"
 import { assets } from "../assets/assets"
-import { motion } from 'motion/react' // លុប scale ចេញកុំឱ្យ Error
+import { motion } from 'motion/react'
 
 const Banner = () => {
     return (

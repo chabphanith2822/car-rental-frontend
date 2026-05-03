@@ -34,7 +34,12 @@ const AddCar = () => {
 			formData.append('image', image)
 			formData.append('carData', JSON.stringify(car))
 
-			const {data} = await axios.post('/api/owner/add-car', formData)
+			const { data } = await axios.post('/api/owner/add-car', formData, {
+				headers: {
+					Authorization: localStorage.getItem('token'),
+					"Content-Type": "multipart/form-data"
+				}
+			});
 
 			if(data.success){
 				toast.success(data.message)

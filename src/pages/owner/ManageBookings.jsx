@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Title from "../../components/owner/Title"
-import { useAppContext } from "../../context/AppContext"
+import { useAppContext } from "../../context/AppContext.jsx"
 import toast from "react-hot-toast"
 
 const ManageBookings = () => {
