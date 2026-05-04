@@ -74,6 +74,7 @@ const ManageBookings = () => {
                 <table className='w-full border-collapse text-left text-sm text-gray-600'>
                     <thead className='text-gray-500 bg-gray-50'>
                         <tr>
+                            <th className="p-3 font-medium">Customer</th>
                             <th className="p-3 font-medium">Car</th>
                             <th className="p-3 font-medium max-md:hidden">Date Range</th>
                             <th className="p-3 font-medium">Total</th>
@@ -85,6 +86,9 @@ const ManageBookings = () => {
                     <tbody>
                         {bookings.map((booking, index) => (
                             <tr key={index} className='border-t border-borderColor text-gray-500 hover:bg-gray-50'>
+
+                                <td className='px-4 py-3 text-sm text-gray-700'>{booking.user ? booking.user.name : "N/A"}</td>
+
                                 <td className='p-3 flex items-center gap-3'>
                                     <img src={booking.car?.image} alt="" className='h-12 w-12 aspect-square rounded-md object-cover'/>
                                     <p className='font-medium max-md:hidden'>{booking.car?.brand} {booking.car?.model}</p>
